@@ -37,21 +37,23 @@ public class GunnarEmmaDice {
             int gunnar = 0;
             int emma = 0;
             String line = null;
-            String line1, line2;
-             StringTokenizer tk1, tk2;
+           // String line1, line2;
+            
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            StringTokenizer tk1, tk2;
             while (m < 3) {
 
-                line1 = reader.readLine();
-                line2 = reader.readLine();
+                //line1 = reader.readLine();
+                //line2 = reader.readLine();
                 //  if (line == null ) {
                 //    break;
                 //}
 
                 //int t = Integer.parseInt(reader.readLine());
-                tk1 = new StringTokenizer(line1);
-                tk2 = new StringTokenizer(line2);
-
+                tk1 = new StringTokenizer(reader.readLine());
+                tk2 = new StringTokenizer(reader.readLine()); 
+                
+                
                 for (int j = 0; j < 4; j++) {
                     gunnar = gunnar + Integer.parseInt(tk1.nextToken());
                     emma = emma + Integer.parseInt(tk2.nextToken());
@@ -69,6 +71,7 @@ public class GunnarEmmaDice {
                     gunnar = emma = 0;
                 }
                 m++;
+                
             }
         }
     }
