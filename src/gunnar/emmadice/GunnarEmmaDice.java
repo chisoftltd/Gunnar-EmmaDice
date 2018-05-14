@@ -18,6 +18,7 @@ public class GunnarEmmaDice {
 
     /**
      * @param args the command line arguments
+     * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
@@ -35,24 +36,25 @@ public class GunnarEmmaDice {
             int m = 0;
             int gunnar = 0;
             int emma = 0;
+            String line = null;
+            String line1, line2;
+             StringTokenizer tk1, tk2;
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             while (m < 3) {
-                final String line1 = reader.readLine();
-                final String line2 = reader.readLine();
+
+                line1 = reader.readLine();
+                line2 = reader.readLine();
                 //  if (line == null ) {
                 //    break;
                 //}
 
                 //int t = Integer.parseInt(reader.readLine());
-                StringTokenizer tk1 = new StringTokenizer(line1);
-                StringTokenizer tk2 = new StringTokenizer(line2);
+                tk1 = new StringTokenizer(line1);
+                tk2 = new StringTokenizer(line2);
 
                 for (int j = 0; j < 4; j++) {
-
                     gunnar = gunnar + Integer.parseInt(tk1.nextToken());
-
                     emma = emma + Integer.parseInt(tk2.nextToken());
-
                 }
 
                 if (gunnar < emma) {
